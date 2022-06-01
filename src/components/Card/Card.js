@@ -1,9 +1,7 @@
 import styles from './Card.module.scss';
 
-const Card = props => {
-    return (
-        <li className={styles.card}>{props.title}</li>
-    );
-};
+const Card = ({ title }) => (
+    <li className={styles.card}>{title}</li>
+);
 
 export default Card;

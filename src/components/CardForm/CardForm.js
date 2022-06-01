@@ -4,12 +4,12 @@ import TextInput from './../TextInput/TextInput';
 
 import { useState } from 'react';
 
-const CardForm = props => {
+const CardForm = ({ action, columnId }) => {
     const [title, setTitle] = useState('');
     
     const handleSubmit = e => {
         e.preventDefault();
-        props.action({title: title}, props.columnId);
+        action({title: title}, columnId);
         setTitle('');
     };
 
