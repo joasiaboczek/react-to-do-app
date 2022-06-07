@@ -6,9 +6,8 @@ const reducer = (state, action) => {
 };
 
 const store = configureStore(
-  reducer,
-  initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  { reducer, preloadedState: initialState },
+  
 );
 
 export default store;
