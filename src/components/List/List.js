@@ -7,7 +7,6 @@ const List = () => {
 
   const columns = useSelector(state => state.columns);
 
-  console.log(columns);
   return (
       <div className= {styles.list}>
       <header className = {styles.header}>
@@ -21,5 +20,6 @@ const List = () => {
     </div>
   );
 };
+
 
   export default List;
