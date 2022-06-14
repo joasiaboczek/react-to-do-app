@@ -13,7 +13,7 @@ import shortid from 'shortid';
   }
 }; */
 
-const columnsReducer = (state = initialState, action) => {
+const columnsReducer = (state = initialState.columns, action) => {
   switch(action.type) {
     case 'ADD_COLUMN':
       return [...state, { ...action.payload, id: shortid() }];
@@ -22,7 +22,7 @@ const columnsReducer = (state = initialState, action) => {
   }
 }
 
-const cardsReducer = (state = initialState, action) => {
+const cardsReducer = (state = initialState.cards, action) => {
   switch(action.type) {
     case 'ADD_CARD':
       return [...state, { ...action.payload, id: shortid() }];
