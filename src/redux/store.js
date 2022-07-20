@@ -31,9 +31,20 @@ const cardsReducer = (state = initialState.cards, action) => {
   }
 }
 
+const searchStringReducer = (state, action) => {
+  switch(action.type) {
+    case 'UPDATE_SEARCH_STRING':
+      return { ...state, searchString: action.payload };
+      default:
+      return state;
+  }
+}
+
 const subreducers = {
   columns: columnsReducer,
-  cards: cardsReducer
+  cards: cardsReducer,
+  searchString: searchStringReducer
+
 }
 
 const reducer = combineReducers(subreducers);
